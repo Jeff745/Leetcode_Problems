@@ -1,0 +1,32 @@
+package Codility;
+
+public class solution {
+	
+	public int solution(String S) {
+		
+		char left_curly_brace='{';
+		char right_curly_brace='}';
+		char left_bracket='(';
+		char right_bracket=')';
+		char left_square_bracket='[';
+		char right_square_bracket=']';
+
+
+
+
+		for (int i=0; i<S.length(); i++) {
+			if (S.charAt(i))
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		return 0;
+	}
+	
+
+}

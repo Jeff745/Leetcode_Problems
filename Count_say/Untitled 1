@@ -1,0 +1,24 @@
+Implement a recursive approach
+
+Parameters needed:
+	-N, the current number we are processing
+	
+What is the base case?
+	If 'n' =1
+	-Return "1"
+	
+In each of the recursive call
+	-Recursively find the 'prev' string for 'n-1'
+	
+	Create a Stringbuilder 'cur' to keep track of the count and say for 'n'
+	
+	Create a variable 'count' to keep track of the frequency of the current character
+	
+	Iterate through indices of 'prev', denoted as 'i'
+		Increment 'count'
+		If 'i' is at the last index or the Character at 'i+1' is not equal to the current character at 'i'
+			-Append 'count' to 'cur'
+			Append the current character to 'cur'
+			Reset 'count' to 0
+			
+		Return a string representation of 'cur' 

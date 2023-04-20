@@ -1,0 +1,51 @@
+package leetcode;
+
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Set;
+
+public class solution {
+	
+	public static boolean wordPattern(String pattern, String s) {
+		
+		Hashtable<Character,String> pattern_table = new Hashtable<Character,String>();
+		Hashtable<String,Character> s_table = new Hashtable<String,Character>();
+
+		String[] s_key_values = s.split(" ");
+		
+		if(s_key_values.length!=pattern.length()) {
+			return false;
+			
+		}
+		
+		for (int i=0; i<pattern.length();i++) {
+			
+			char c= pattern.charAt(i);
+			String str = s_key_values[i];
+			
+			if (!pattern_table.contains(c)) {
+				pattern_table.put(c, str);
+				
+			}
+			
+			else if (!pattern_table.contains(str)) {
+				s_table.put(str, c);
+				
+			}
+			
+		}
+        
+    }
+	
+	public static void main(String[] args) {
+		
+		String pattern= "aba";
+		String s = "dog cat cat";
+		//String s = "dog cat cat fish";
+
+		System.out.println(wordPattern(pattern, s));
+		
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class solution {
+	
+	 public static List<Integer> findAnagrams(String s, String p) {
+		 
+		 List<Integer> final_anagrams = new ArrayList<>();
+		 
+		 int n= s.length();
+		 int m= p.length();
+
+		 char arr_s = new char
+		 
+	        
+	    }
+
+}

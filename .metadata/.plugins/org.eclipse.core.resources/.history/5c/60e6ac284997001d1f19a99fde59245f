@@ -1,0 +1,26 @@
+
+public class solution {
+	
+	 public static int minFlipsMonoIncr(String s) {
+		 
+		 int oneCount=0 , flipCount=0;
+		 
+		 for (int i=0; i<s.length();i++) {
+			 
+			 if(s.charAt(i)=='1') {
+				 oneCount++;
+				 
+			 }
+			 
+			 else if (s.charAt(i)=='0' && oneCount >0) {
+				 flipCount++;
+				 
+			 }
+			 
+		 }
+		 
+		 return flipCount = Math.min(oneCount, flipCount);
+	        
+	    }
+
+}

@@ -1,0 +1,39 @@
+package Leetcode;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class solution {
+	
+	 public int[] solution(int N, int[] A) {
+		 
+		 int[] counter_array= new int[N];
+		 Arrays.fill(counter_array, 0);  
+		 
+		 for (int i = 0; i<A.length; i++) {
+			 
+			 if (A[i]<N) {
+				 counter_array[N]++;
+			 }
+			 
+			 else {
+				 
+				 int tempmax = Collections.max(Arrays.asList(counter_array));
+				 for (int j=0; j<counter_array.length;j++) {
+					 counter_array[j]= tempmax;
+					 
+				 }
+				 
+			 }
+			 
+			 
+		 }
+		 
+		 
+		 
+		 
+		 
+	 }
+
+}

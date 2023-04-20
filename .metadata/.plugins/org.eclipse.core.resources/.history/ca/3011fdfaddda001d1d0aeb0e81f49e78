@@ -1,0 +1,31 @@
+package leetcode;
+
+import java.util.Stack;
+
+public class solution {
+	
+	 public boolean validateStackSequences(int[] pushed, int[] popped) {
+		 
+		 int i=0;
+		 
+		 Stack<Integer> temp_stack = new Stack<>();
+		 
+		 for (int j=0; j<pushed.length;j++) {
+			 temp_stack.push(pushed[j]);
+			 
+			 while (i<popped.length && !temp_stack.empty() && popped[i] == temp_stack.search(-1)) {
+				 
+				 
+				 
+			 }
+			 
+			 
+		 }
+		 
+		 
+		 
+		 
+	        
+	    }
+
+}

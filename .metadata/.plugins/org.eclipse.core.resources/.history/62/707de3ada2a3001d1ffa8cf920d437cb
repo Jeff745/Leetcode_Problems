@@ -1,0 +1,21 @@
+package leetcode;
+
+import java.util.HashMap;
+
+public class solution {
+	
+	  public static boolean isAlienSorted(String[] words, String order) {
+		
+		  char[] letters = order.toCharArray(); 
+		HashMap<Character,Integer> letter_orders = new HashMap<>();
+		
+		for (int i=0; i< letters.length;i++) {
+			
+			letter_orders.put(letters[i], letter_orders.getOrDefault(letters[i], 0)+1);
+			
+		}
+		  
+	        
+	    }
+
+}

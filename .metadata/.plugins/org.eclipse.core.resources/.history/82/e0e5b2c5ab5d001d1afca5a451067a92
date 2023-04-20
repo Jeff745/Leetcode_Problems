@@ -1,0 +1,54 @@
+package Codility;
+
+import java.util.Stack;
+
+public class solution {
+	
+	public int solution(String S) {
+		
+		Stack<Character> string_symbols = new Stack<Character>();
+		
+		char left_curly_brace='{';
+		char right_curly_brace='}';
+		char left_bracket='(';
+		char right_bracket=')';
+		char left_square_bracket='[';
+		char right_square_bracket=']';
+
+		char[] strings = S.toCharArray();
+
+
+		//
+		for (int i=0; i< strings.length; i++) {
+			if (S.charAt(i)==left_bracket || S.charAt(i)== left_curly_brace || S.charAt(i)== left_square_bracket) {
+				
+				string_symbols.push((char) i);
+				
+			}
+			
+			if (S.charAt(i)==left_bracket) {
+				
+				string_symbols.push((char) i);
+				
+				if (S.charAt(i)==right_bracket) {
+					string_symbols.pop((char) i);
+
+					
+				}
+
+				
+			}
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		return 0;
+	}
+	
+
+}

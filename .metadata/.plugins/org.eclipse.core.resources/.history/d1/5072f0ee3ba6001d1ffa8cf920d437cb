@@ -1,0 +1,7 @@
+
+public class solution {
+
+public static int[] shuffle(int[] nums, int n) {
+        
+    }
+}

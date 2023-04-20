@@ -1,0 +1,45 @@
+package leetcode;
+
+public class solution {
+		public static boolean detectCapitalUse(String word) {
+			
+			char[] word_char = word.toCharArray();
+			
+		String regex_check = "^[A-Z]+[A-Z]";
+	
+		boolean result = false;
+		if (word.toLowerCase().equals(word)) {
+			return result = true;
+			
+		}
+		
+		else if (word.toUpperCase().equals(word)) {
+			return result = true;
+			
+		}
+
+			
+			for (int i=0; i< word_char.length; i++) {
+				
+				char test= word.charAt(i);
+				
+				
+				
+				
+				
+			}
+			
+	        
+			return false;
+	    }
+		
+		public static void main(String[] args) {
+			
+			//String testing = "USA";
+			String testing = "FlaG";
+
+			System.out.println(detectCapitalUse(testing));
+		}
+	
+
+}

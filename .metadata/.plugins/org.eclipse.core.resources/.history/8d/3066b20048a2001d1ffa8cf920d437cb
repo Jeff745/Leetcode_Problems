@@ -1,0 +1,13 @@
+package leetcode;
+
+import java.util.Arrays;
+
+public class solution {
+	
+	 public static int bestTeamScore(int[] scores, int[] ages) {
+		 
+		 Arrays.sort(ages);
+	        
+	    }
+
+}

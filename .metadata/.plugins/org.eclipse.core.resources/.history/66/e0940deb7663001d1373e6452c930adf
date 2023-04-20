@@ -1,0 +1,28 @@
+package reverse_string_words;
+
+public class solution {
+	
+		public static String reverseWords(String s) {
+			
+			String[] splitted_words= s.trim().replaceAll("\\s+", "").split("");
+			String[] final_words =  new String[splitted_words.length];
+			
+			for(int i=splitted_words.length; i<splitted_words.length;i--) {
+				
+				final_words[i]=splitted_words[i];
+					
+			}
+			
+			return final_words.toString();
+        
+    }
+		
+		public static void main(String[] args) {
+			
+			String test = "  hello world  ";
+			System.out.println(reverseWords(test));
+			
+			
+		}
+
+}

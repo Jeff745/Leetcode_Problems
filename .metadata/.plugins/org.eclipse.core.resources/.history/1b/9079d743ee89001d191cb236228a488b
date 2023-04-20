@@ -1,0 +1,62 @@
+package leetcode;
+
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class solution {
+	
+	public static boolean wordPattern(String pattern, String s) {
+		
+		Hashtable<Character,Integer> pattern_table = new Hashtable<Character,Integer>();
+		Hashtable<String,Integer> s_table = new Hashtable<String,Integer>();
+
+		char[] pattern_char = pattern.toCharArray();
+		String[] s_key_values = s.split(" ");
+		
+		for (String pair: s_key_values) {
+			
+			s_table.put(pair, s_table.getOrDefault(pair, 0)+1);			
+		}
+		
+		for (Character pattern_pair: pattern_char) {
+			
+			pattern_table.put(pattern_pair, pattern_table.getOrDefault(pattern_pair, 0)+1);	
+		}
+		
+//		for(Map.Entry<Character, Integer> pattern_entry:pattern_table.entrySet()) {
+//			
+//			for(Map.Entry<String, Integer> s_entry:s_table.entrySet()) {
+//				
+//				if (pattern_table.values() == s_table.values()) {
+//					
+//					return true;
+//				}
+//
+//			}
+//			
+//		}
+//		
+//		return false;
+		
+		boolean ans = s_table.entrySet().stream()
+						.filter(value->pattern_table.entrySet()
+								.stream().anyMatch(value1->(value1.getValue()
+								.equals(value.getValue())))).findAny().isPresent();
+		
+		return ans;
+        
+    }
+	
+	public static void main(String[] args) {
+		
+		String pattern= "aaaa";
+		String s = "dog cat cat dog";
+		//String s = "dog cat cat fish";
+
+		System.out.println(wordPattern(pattern, s));
+		
+		
+	}
+
+}

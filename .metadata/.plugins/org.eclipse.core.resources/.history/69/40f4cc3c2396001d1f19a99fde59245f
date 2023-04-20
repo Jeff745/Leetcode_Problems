@@ -1,0 +1,15 @@
+package leetcode;
+
+import java.util.LinkedList;
+
+public class solution {
+	
+		public static int[][] insert(int[][] intervals, int[] newInterval) {
+			
+			LinkedList<int[]> temp_list = new LinkedList<int[]>();
+			
+			for ()
+        
+    }
+
+}

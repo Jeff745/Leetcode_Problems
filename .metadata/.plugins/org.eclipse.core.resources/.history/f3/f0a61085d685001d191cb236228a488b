@@ -1,0 +1,34 @@
+package leetcode;
+
+public class solution {
+	
+	 public int maximumBags(int[] capacity, int[] rocks, int additionalRocks) {
+		   int count =0;
+		   for (int i=0; i<capacity.length;i++){
+		           int diff=capacity[i]-rocks[i];
+		   if (diff >0 && additionalRocks>0){
+		     additionalRocks-=diff;
+		           rocks[i]+=diff;
+		           count++;
+		           
+		   }
+		           
+		           else if (diff<0){
+		                   
+		             rocks[i]= capacity[i];  
+		                   count++;
+		           }
+		           
+		           else if(diff==0) {
+		          count++;         
+		                   
+		           }
+		           
+		           
+		   }
+		            
+		     return count;       
+		        
+		    }
+
+}

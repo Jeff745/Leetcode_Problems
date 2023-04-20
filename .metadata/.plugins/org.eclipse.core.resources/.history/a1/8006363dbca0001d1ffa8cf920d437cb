@@ -1,0 +1,27 @@
+package leetcode;
+
+public class solution {
+	
+public static int tribonacci(int n) {
+	
+	int[] F= new int[n+1];
+	int ans =0;
+	F[0]=0;
+	F[1]=F[2]=1;
+	
+	for (int i =3; i< n; i++) {
+		F[i] = F[i-1]+F[i-2]+F[i-3];
+		
+		return F[i];
+
+	}
+       
+  }
+
+public static void main(String[] args) {
+	
+	int a= 25;
+	System.out.println(tribonacci(a));
+}
+
+}

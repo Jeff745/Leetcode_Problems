@@ -1,0 +1,17 @@
+package leetcode;
+
+import java.util.Hashtable;
+
+public class solution {
+	
+	public static boolean wordPattern(String pattern, String s) {
+		
+		Hashtable<Character,Integer> pattern_table = new Hashtable<Character,Integer>();
+		Hashtable<Character,Integer> s_table = new Hashtable<Character,Integer>();
+
+		char[] pattern_char = pattern.toCharArray();
+		String[] s_key_values = s.split(" ");
+        
+    }
+
+}

@@ -1,0 +1,69 @@
+import java.util.Stack;
+
+import solution2.TreeNode;
+
+public class solution {
+	
+	 public class TreeNode {
+		     int val;
+		      TreeNode left;
+		     TreeNode right;
+		      TreeNode() {}
+		      TreeNode(int val) { this.val = val; }
+		     TreeNode(int val, TreeNode left, TreeNode right) {
+		          this.val = val;
+		          this.left = left;
+		          this.right = right;
+		      }
+		 }
+	 
+	 TreeNode insertrec(TreeNode root, int key) {
+		 if (root ==null) {
+			 root = new TreeNode(key);
+			 
+		 }
+		 
+		 else if (key< root.val) {
+			 root.left = insertrec(root.left, key);
+		 }
+		 
+		 else if (key > root.val) {
+			 root.right = insertrec(root.right, key);
+		 }
+		 
+	 }
+	 
+	 public static int sumNumbers(TreeNode root) {
+		 
+		 if (root==null) {
+			 return 0;
+
+			 
+		 }
+
+		 	Stack<TreeNode> s_numbers = new Stack<TreeNode>();
+	        TreeNode current = root;
+	        
+	        while(current!=null|| s_numbers.size()>0 ) {
+	        	
+	        	while(current!=null) {
+	        		/* place pointer to a tree node on the stack
+	        		before traversing the node's left subtree */
+	        		s_numbers.push(current);
+	        		current = current.left;
+	        	}
+	        	
+	        	//Current must be null at this point
+	        	current = s_numbers.pop();
+	        	
+	        	int left = Integer.parseInt(Integer.toString(current.val));
+	     
+	        	current = current.right;
+	        	
+	        	int right = Integer.parseInt(Integer.toString(current.val));
+
+	        	
+	        }
+	    }
+
+}
